@@ -4,6 +4,11 @@ import App from "./App";
 import "./index.css";
 import { AuthProvider } from "./contexts/authentication";
 import { BrowserRouter } from "react-router-dom";
+//import jwtInterceptor
+import jwtInterceptor from "./utils/jwtInterceptor";
+
+// Attach token in header of every request
+jwtInterceptor();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
